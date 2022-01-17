@@ -35,6 +35,9 @@ let app = new Vue({
                 text: this.task,
                 
             })
+        },
+        deleteTask: function(index){
+            this.tasks.splice(index,1);
         }
     }
    
