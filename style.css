@@ -5,3 +5,7 @@ button{
 .textLinked{
     text-decoration: line-through;
 }
+
+.clickOnText{
+    cursor: pointer;
+}

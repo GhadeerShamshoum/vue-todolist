@@ -3,6 +3,7 @@ let app = new Vue({
     data: {
         value: "add a task",
         task:'',
+        newIndex : 0,
         
         tasks: [
             {
@@ -41,8 +42,20 @@ let app = new Vue({
             this.tasks.splice(index,1);
         },
         editTask: function(index){
-            this.tasks[index].done= true;
-            console.log('done');
+            if(this.newIndex == 0){
+                this.tasks[index].done= true;
+                console.log(this.newIndex);
+                this.newIndex++;
+            }
+            
+    
+            else if(this.newIndex > 0){
+                this.tasks[index].done= false;
+                this.newIndex--;
+                console.log(this.newIndex)
+            }
+            
+            
             
         },
         completed: function(index){
