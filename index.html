@@ -14,7 +14,7 @@
     <div id="app">
         <div class="container d-flex flex-row m-5 justify-content-center bg-secondary.bg-gradient bs-bg-opacity: .5;">
             <div class="row d-flex flex-row">
-                <input class="d-flex flex-row" type="text" v-model="task" placeholder="Enter text">
+                <input class="d-flex flex-row" type="text" v-model="task" placeholder="Enter text" @keyup.enter="addTask">
                 <button class="d-flex flex-row col-4 bg-warning" @click='addTask'>Submit</button>
             </div>
         </div>

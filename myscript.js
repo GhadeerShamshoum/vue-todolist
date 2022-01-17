@@ -47,7 +47,6 @@ let app = new Vue({
         },
         completed: function(index){
             if(this.tasks[index].done=== true){
-                console.log('hgjhgj')
                 return "textLinked";
             }
             return '';
