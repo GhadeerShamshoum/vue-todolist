@@ -31,7 +31,7 @@
                     </thead>
                     <tbody>
                       <tr v-for='(task, index) in tasks'>
-                        <th scope="row">{{task.text}}</th>
+                        <th @click='editTask(index)' :class="completed(index)" scope="row">{{task.text}}</th>
                         <td></td>
                         <td></td>
                         <td>

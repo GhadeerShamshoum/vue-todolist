@@ -39,7 +39,20 @@ let app = new Vue({
         },
         deleteTask: function(index){
             this.tasks.splice(index,1);
+        },
+        editTask: function(index){
+            this.tasks[index].done= true;
+            console.log('done');
+            
+        },
+        completed: function(index){
+            if(this.tasks[index].done=== true){
+                console.log('hgjhgj')
+                return "textLinked";
+            }
+            return '';
         }
+        
     }
    
 

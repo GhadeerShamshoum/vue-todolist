@@ -1,3 +1,7 @@
 button{
     height: 30px;
 }
+
+.textLinked{
+    text-decoration: line-through;
+}
