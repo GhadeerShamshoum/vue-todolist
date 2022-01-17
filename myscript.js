@@ -34,31 +34,30 @@ let app = new Vue({
             if(this.task.length === 0)return;
             this.tasks.push({
                 text: this.task,
+                done:false
+                
                 
             })
             this.task = '';
+            console.log('hjhjh');
         },
         deleteTask: function(index){
             this.tasks.splice(index,1);
         },
         editTask: function(index){
-            if(this.newIndex == 0){
-                this.tasks[index].done= true;
-                console.log(this.newIndex);
-                this.newIndex++;
-            }
-            
-    
-            else if(this.newIndex > 0){
+            if(this.tasks[index].done == true){
                 this.tasks[index].done= false;
-                this.newIndex--;
-                console.log(this.newIndex)
+                console.log('change to false',this.tasks[index].text);
+            } 
+            else 
+            {
+                console.log('change to true',this.tasks[index].text);
+                this.tasks[index].done = true;
             }
-            
-            
-            
+                  
         },
         completed: function(index){
+            console.log('completed string', this.tasks[index].text);
             if(this.tasks[index].done=== true){
                 return "textLinked";
             }
